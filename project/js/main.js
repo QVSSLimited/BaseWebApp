@@ -8,11 +8,13 @@ function getWeather(searchQuery) {
 $.ajax(url,{success: function(data){
   $(".city").text(data.name);
   $(".temp").text(data.main.temp);
+}, error: function(error){
+  $",error-message").text("An error occured");
 }})
 }
 
 function searchWeather() {
-  var searchQuery = $(",search").val();
+  var searchQuery = $(".search").val();
   getWeather(searchQuery); 
 }
 
