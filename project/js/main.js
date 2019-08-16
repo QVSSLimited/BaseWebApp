@@ -3,7 +3,7 @@ $(document).ready(function(){
 })
 
 function getWeather(searchQuery) {
-   var url = "https://api.openweathermap.org/data/2.5/weather?q="+qsearchQuery+"&units=imperial&APPID="+apiKey;
+   var url = "https://api.openweathermap.org/data/2.5/weather?q="+searchQuery+"&units=imperial&APPID="+apiKey;
 
 $.ajax(url,{success: function(data){
   $(".city").text(data.name);
